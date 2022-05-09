@@ -24,7 +24,7 @@ byrne "Until then enjoy kiddo!"
 
 
 
-label morning:
+label work_1:
 
     scene office
     with fade
@@ -81,3 +81,76 @@ tech "It's your own damn fault for not preparing."
 "The interviewee sees you not minding your own business."
 
 vue "Hey you, you also doing the interview?"
+
+label interview_intro:
+        "So you here for the interview?"
+
+menu:
+        "I'm literally the interviewer, the Technical Lead."
+            jump interview_intro_a
+
+        "Yes, best of luck to both of us.":
+            jump interview_intro_b
+
+        "Let's do some interview prep questions so we can both benefit, us folks gotta look for each other and all."
+
+		"No, I'm an intern."
+            jump interview_intro_c
+
+		"Just walk away."
+            jump interview_intro_d
+
+label interview_intro_a:
+
+    me "I'm literally the interviewer, the Technical Lead."
+
+    tech "..."
+
+    vue "Kinda sus man."
+
+    vue "Don't wanna be rude, you just don't look the type."
+
+    vue "You two just messing with me ugh!"
+
+    vue "I'm gonna go practice in the toilet, you guys can't distract me there atleast."
+
+    "He walks off, pulling out a crumpled piece of paper with some scribbles on it."
+
+    tech "Atleast he's being serious about practicing now."
+
+    tech "Even if it's too late."
+
+    tech "Looks like you already made it past the interview process."
+
+    tech "Guess we'll be seeing each other around then."
+
+"She gives a small wave as she heads off."
+
+    me "Damn, I didn't even get her name."
+        jump work_2
+
+
+label interview_intro_b:
+
+        vue "Shit, I was hoping I wouldn't have tto see any rivals before the interview but alas!"
+
+        vue "Best of luck to you too pal."
+
+        vue "Let's do some interview prep questions so we can both benefit, us folks gotta look for each other and all."
+
+        vue "Even if we're fighting for the same spot."
+            jump interview_quiz
+
+##### technical quiz #####
+label interview_quiz:
+
+vue "Ok, so I have a feeling there's gonna be some questions on the Agile & Scrum stuff so I wanna do a refressher on that."
+
+vue "I'm gonna ask you questions and hopefully you get it right cus I don't know it fully myself you see."
+
+menu:
+
+    jump work_2
+##### end of quiz #####
+
+label work_2:
