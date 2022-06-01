@@ -374,9 +374,30 @@ pr "Let's get to know each other more too."
 
 #Get contact card.
 
-##### IT Bug chaser #####
+##### IT Bug Fixer #####
 
 scene office
 with fade
 
 "As you sit back down on your desk, you go to turn your monitor on but only to find out that it won't?"
+
+byrne "Hey kid, I know you didn't call me but my paternal instincts started to flare up!"
+
+"You explain to him that your computer is not working."
+
+byrne "Hmm."
+
+byrne "I'm not so tech savvy, bestt to call Tech Support for this."
+
+"Byrnestone takes you to the IT Support Room, it's located fairly close to your work area.
+It's like at the centre of the building so every department can come crying for help, begging that the IT hopefully has a a minute old copy of the documents that they saved hours ago."
+
+"You meet one of the IT Support, Sunny."
+
+"Despite the name she has a rather gloom appearance."
+
+it "What is it this time old man, you didn't use the DVD Drive to hold your coffee again right?"
+
+byrne "Aw geez, not in front of the new kid!"
+
+byrne "Don't make me look stupid, I was just joking. I know what that thing is for!"
