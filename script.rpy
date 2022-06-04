@@ -347,9 +347,11 @@ window hide
 
 pause
 
-#do a black out and it reveals the conference room in a mess.
-
 label conference_cleaner:
+
+show conference
+with fade
+
 #cleaning the conference room by clicking items
 
 #show screen
