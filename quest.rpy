@@ -1,4 +1,5 @@
 #intern quest & achievement system
+#or QuestList
 
 init python:
     import renpy.store as store
@@ -23,8 +24,8 @@ init python:
             self.task_list.remove(task)
 
 ######
-default task_first_day = Task("The Interview", "Help a friend in need.")
-default task_conference = Task("VIP Lounge", "Tidy up the Conference room.")
-default task_research = Task("The Matchmaker", "Do some Research & Developement.")
+#default task_first_day = Task("The Interview", "Help a friend in need.")
+#default task_conference = Task("VIP Lounge", "Tidy up the Conference room.")
+#default task_research = Task("The Matchmaker", "Do some Research & Developement.")
 
 default my_task = TaskList()

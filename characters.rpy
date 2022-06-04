@@ -1,4 +1,4 @@
-define me = Character("Intern")
+define me = Character("You, the Intern")
 
 #NPCs#
 define pr = Character("Vanessa From Public Relations.")

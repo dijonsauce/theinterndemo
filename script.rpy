@@ -7,7 +7,9 @@ label start:
 
 show byrne at right
 
-byrne "Oh hey great to see ya. welcome to the team kid!"
+byrne "Oh hey great to see ya!"
+
+byrne "Welcome to the team kid!"
 
 byrne "It's me your mentor, you already know that by now I guess."
 
@@ -19,9 +21,11 @@ byrne "And hopefully you'll enjoy it."
 
 byrne "Here's the sheet with the programmes for today."
 
-byrne "Let me know if you need anything or we can catch up after lunch during the mentoring session."
+byrne "Let me know if you need anything or we can catch up during the mentoring session."
 
-byrne "Ah here, my card so you can contact me."
+byrne "Which will be after lunch so don't be late!"
+
+byrne "Ah here, my card so you can contact me if you need anything."
 
 byrne "Until then enjoy kiddo!"
 
@@ -53,9 +57,9 @@ label interview:
 
 me "He's literally me for real, for real."
 
-vue "Man I'm so stressed about this interview."
-
 show lucas at left
+
+vue "Man I'm so stressed about this interview."
 
 me "Oh."
 
@@ -121,6 +125,8 @@ me "I'm literally the interviewer, the Technical Lead."
 
 tech "..."
 
+vue "..."
+
 vue "Kinda sus man."
 
 vue "Don't wanna be rude, you just don't look the type."
@@ -128,6 +134,8 @@ vue "Don't wanna be rude, you just don't look the type."
 vue "You two just messing with me ugh!"
 
 vue "I'm gonna go practice in the toilet, you guys can't distract me there atleast."
+
+hide vue
 
 "He walks off, pulling out a crumpled piece of paper with some scribbles on it."
 
@@ -143,7 +151,7 @@ hide seong
 
 "She gives a small wave as she heads off."
 
-me "Damn, I didn't even get her name."
+me "Damn, I didn't even get her number."
 
 jump work_2
 
@@ -172,7 +180,7 @@ hide seong
 
 "She gives a small wave as she heads off."
 
-me "Damn, I didn't even get her name."
+me "Damn, I didn't even get her number."
 
 vue "We must stay focused!"
 
@@ -186,7 +194,7 @@ vue "I'm gonna ask you questions and hopefully you get it right cus I don't know
 
 #1
 label interview_q_1:
-vue "first one, although Scrum was intended for management of software development projects, it can be used to run software maintenance teams, or as a general project/program management approach."
+vue "First one, although Scrum was intended for management of software development projects, it can be used to run software maintenance teams, or as a general project/program management approach."
 
 menu:
 
@@ -272,13 +280,15 @@ vue "Thanks for the help, I feel more confident now."
 
 "You see a woman appear out of the conference room."
 
+"Is Mr Brent here?"
+
 vue "Looks like it's time."
 
 #vue "oh can you hold onto my stuff, i know i turned my phone off but what if it still goes off? i don't wanna risk it after coming all this way."
 
 #vue "I trust you wont steal my money cus i have nothing in my bank."
 
-"Lucas gives you a quick nod before follwing the interviewer into the small room."
+"Lucas gives you a quick nod before following the interviewer into the small room."
 
 hide lucas
 
@@ -291,8 +301,16 @@ label interview_intro_d:
 
 "Without a word you walk away."
 
+hide lucas
+hide tech
+
+jump work_2
+
 ##### back to work 2 ######
 label work_2:
+
+show office
+with fade
 
 "You head back to your desk, thinking about the awesome fun work day ahead."
 
@@ -306,8 +324,10 @@ label work_2:
 
 "You, not staying in your own lane, go close to the source of drama."
 
-scene conference
+scene conference2
 with fade
+
+show van at left
 
 pr "Oh no a very important client is coming to meet us but the conference room is still a mess!"
 
@@ -319,7 +339,13 @@ pr "Hey, you're the new intern for our department right?"
 
 pr "Come over here and help!"
 
+hide van
+
 "This isn't your department but you help anyway."
+
+window hide
+
+pause
 
 #do a black out and it reveals the conference room in a mess.
 
@@ -330,7 +356,11 @@ label conference_cleaner:
 
 #After  cleaning.
 
-pr "Sorry for mistaking you for one of our interns as well as dragging you in like this."
+"After you clear up the room as well as the situation."
+
+show van at left
+
+pr "Sorry for mistaking you for one of our interns and dragging you in like this."
 
 pr "But thank you so much for helping out at such a short notice."
 
@@ -368,6 +398,8 @@ pr "You're pretty cool, keep helping around the workplace and you'll get yoursel
 
 pr "Let's get to know each other more too."
 
+hide van
+
 "She struts off, and the crowd engulfs her."
 
 "It's like watching a celeb get swarmed by the paparazzi."
@@ -381,23 +413,70 @@ with fade
 
 "As you sit back down on your desk, you go to turn your monitor on but only to find out that it won't?"
 
+show byrne at right
+
 byrne "Hey kid, I know you didn't call me but my paternal instincts started to flare up!"
 
 "You explain to him that your computer is not working."
 
 byrne "Hmm."
 
-byrne "I'm not so tech savvy, bestt to call Tech Support for this."
+byrne "I'm not so tech savvy, best to call Tech Support for this one."
+
+hide byrne
 
 "Byrnestone takes you to the IT Support Room, it's located fairly close to your work area.
-It's like at the centre of the building so every department can come crying for help, begging that the IT hopefully has a a minute old copy of the documents that they saved hours ago."
+It's at the centre of the building so every department can come crying for help,"
+
+show  it_support
+with fade
+
+"begging that the IT hopefully has a minute old copy of the documents that they saved hours ago."
 
 "You meet one of the IT Support, Sunny."
 
 "Despite the name she has a rather gloom appearance."
 
-it "What is it this time old man, you didn't use the DVD Drive to hold your coffee again right?"
+show sunny at left
+
+it "What is it this time, you didn't use the DVD Drive to hold your coffee again right?"
+
+show byrne at right
 
 byrne "Aw geez, not in front of the new kid!"
 
-byrne "Don't make me look stupid, I was just joking. I know what that thing is for!"
+byrne "I was just joking. I know what that thing is for!"
+
+it "Hopefully you do now. I guess you can teach an old dog new tricks."
+
+byrne "You see, our new recruits got a  problem with their computer."
+
+byrne "The thing won't turn on."
+
+hide byrne
+hide sunny
+
+"You nod at each word as evidence that it in fact does not turn on."
+
+show office
+with fade
+
+"The three of you make your way to the problem, Byrnestone & Sunny continue to chatter along the way."
+
+"Once Sunny takes over your workstation, within seconds she finds the problem. As expected from Tech Support!"
+
+it "Yep, it's bugs."
+
+byrne "Let's watch our star tech support fix these bugs then."
+
+it "Oh, it's not the fixing kind."
+
+"She then opens the tower case next to the monitor."
+
+"You see lots of bugs."
+
+"It's so colourful and disgusting."
+
+it "It's this kind."
+
+### spray shooting gallery game

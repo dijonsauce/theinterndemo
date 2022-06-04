@@ -1,0 +1,26 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script.rpy", line 56: end of line expected.
+    show lucas at left vue "Man I'm so stressed about this interview."
+                       ^
+
+File "game/script.rpy", line 62: end of line expected.
+    show seong at right tech "I'm surprised you made it this far."
+                        ^
+
+File "game/script.rpy", line 380: end of line expected.
+    show byrne at right byrne "Hey kid, I know you didn't call me but my paternal instincts started to flare up!"
+                        ^
+
+File "game/script.rpy", line 399: end of line expected.
+    show sunny at left it "What is it this time, you didn't use the DVD Drive to hold your coffee again right?"
+                       ^
+
+File "game/script.rpy", line 401: end of line expected.
+    show byrne at right byrne "Aw geez, not in front of the new kid!"
+                        ^
+
+Ren'Py Version: Ren'Py 7.4.11.2266
+Sat Jun  4 22:06:51 2022

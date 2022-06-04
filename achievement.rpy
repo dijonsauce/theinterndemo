@@ -11,6 +11,7 @@ screen achievements():
 
     frame:
         xpadding 50
+
         ypadding 25
         xalign 0.5
         yalign 0.5
