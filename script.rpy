@@ -2,7 +2,7 @@
 # The game starts here.
 label start:
 
-    scene reception
+    scene bg_reception
     with fade
 
 show byrne at right
@@ -35,7 +35,7 @@ hide byrne
 ##### work 1 - morning #####
 label work_1:
 
-    scene office
+    scene bg_workstation
     with fade
 
 "You spend the morning doing work."
@@ -48,7 +48,7 @@ label work_1:
 
 ###### interview intro ######
 label interview:
-    scene interview
+    scene bg_interview
     with fade
 
 "As you make your way to, I don't know, where ever, you come across-"
@@ -309,22 +309,38 @@ jump work_2
 ##### back to work 2 ######
 label work_2:
 
-show office
+scene bg_workstation
 with fade
 
 "You head back to your desk, thinking about the awesome fun work day ahead."
 
 "NOOOooo!!!"
 
-"You hear someone trying their best to scream in their whisper but it's just about loud enough for only the main character"
-
-"-you-"
+"You hear someone trying their best to scream in their whisper but it's just about loud enough for you to  hear  it."
 
 "to hear it."
 
+label conference_choice:
+
+"What do you do?"
+
+menu:
+    "Nothing, go back to work.":
+        jump conference_choices_a
+
+    "Investigate.":
+        jump conference_choices_b
+
+label conference_choices_a:
+
+"You ignore the cry for help and go back to work."
+jump back_to_work_it
+
+label  conference_choices_b:
+
 "You, not staying in your own lane, go close to the source of drama."
 
-scene conference2
+scene bg_conference_2
 with fade
 
 show van at left
@@ -343,24 +359,82 @@ hide van
 
 "This isn't your department but you help anyway."
 
-window hide
-
 pause
 
 label conference_cleaner:
 
-show conference
-with fade
+    call screen conference_cleanup
+
+    scene bg_conference
+    with fade
+
+    screen conference_cleanup():
+        add "conference"
+        modal True
+
+        imagebutton auto "samplebox_%s":
+            focus_mask True
+            hovered SetVariable("screen_tooltip", "Last season's sample products.")
+            unhovered SetVariable("screen_tooltip", "")
+            action Jump ("cleanup_samplebox")
+
+        imagebutton auto "books_%s":
+            focus_mask True
+            hovered SetVariable("screen_tooltip", "Last meeting's notes.")
+            unhovered SetVariable("screen_tooltip", "")
+            action Jump ("cleanup_books")
+
+        imagebutton auto "jacket_%s":
+            focus_mask True
+            hovered SetVariable("screen_tooltip", "So last season but the right outfit design can still make it work.")
+            unhovered SetVariable("screen_tooltip", "")
+            action Jump ("cleanup_jacket")
+
+        imagebutton auto "writing_%s":
+            focus_mask True
+            hovered SetVariable("screen_tooltip", "What does it say?")
+            unhovered SetVariable("screen_tooltip", "")
+            action Jump ("cleanup_writing")
+
+        imagebutton auto "shoes_%s":
+            focus_mask True
+            hovered SetVariable("screen_tooltip", "So last season but the right outfit design can still make it work.")
+            unhovered SetVariable("screen_tooltip", "")
+            action Jump ("cleanup_shoes")
+
+label cleanup_samplebox:
+    "Looks like samples used to present to stakeholders, we should probably clear it up."
+    jump conference_cleaner
+
+label cleanup_books:
+    "Used for writing down notes from previous meetings, we should probably clear it up."
+    jump conference_cleaner
+
+label cleanup_jacket:
+    "So last season but the right outfit design can still make it work, we should probably clear it up."
+    jump conference_cleaner
+
+label cleanup_writing:
+    "What does it say? We should probably clear it up."
+    jump conference_cleaner
+
+label cleanup_shoes:
+    "So last season but the right outfit design can still make it work, we should probably clear it up."
+    jump after_cleanup
 
 #cleaning the conference room by clicking items
 
+#itll have to be cick on each item and they remain and you go to the cleared up background
+
 #show screen
 
-#After  cleaning.
+label after_cleanup:
 
-"After you clear up the room as well as the situation."
+scene bg_conference with fade
 
 show van at left
+
+"After you clear up the room as well as the situation."
 
 pr "Sorry for mistaking you for one of our interns and dragging you in like this."
 
@@ -410,7 +484,9 @@ hide van
 
 ##### IT Bug Fixer #####
 
-scene office
+label back_to_work_it:
+
+scene bg_workstation
 with fade
 
 "As you sit back down on your desk, you go to turn your monitor on but only to find out that it won't?"
@@ -430,7 +506,7 @@ hide byrne
 "Byrnestone takes you to the IT Support Room, it's located fairly close to your work area.
 It's at the centre of the building so every department can come crying for help,"
 
-show  it_support
+scene bg_techsupport
 with fade
 
 "begging that the IT hopefully has a minute old copy of the documents that they saved hours ago."
@@ -460,7 +536,7 @@ hide sunny
 
 "You nod at each word as evidence that it in fact does not turn on."
 
-show office
+scene bg_workstation
 with fade
 
 "The three of you make your way to the problem, Byrnestone & Sunny continue to chatter along the way."
@@ -480,5 +556,7 @@ it "Oh, it's not the fixing kind."
 "It's so colourful and disgusting."
 
 it "It's this kind."
+
+"Note: End of test."
 
 ### spray shooting gallery game

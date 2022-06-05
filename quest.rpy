@@ -28,4 +28,11 @@ init python:
 #default task_conference = Task("VIP Lounge", "Tidy up the Conference room.")
 #default task_research = Task("The Matchmaker", "Do some Research & Developement.")
 
+#conference cleaner
+default task_cleanup_samplebox = Task("", "",True)
+default task_cleanup_jacket = Task("", "",True)
+default task_cleanup_shoes = Task("", "",True)
+default task_cleanup_books = Task("", "",True)
+default task_cleanup_writing = Task("", "",True)
+
 default my_task = TaskList()
